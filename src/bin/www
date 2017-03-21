@@ -2,11 +2,20 @@
 
 /**
  * Module dependencies.
- */
-
 var app = require('../app');
 var debug = require('debug')('src:server');
 var http = require('http');
+ */
+
+import app from '../app';
+import debug from 'debug';
+debug('src:server');
+import http from 'http';
+import config from '../config/config';
+import datasource from '../config/datasource';
+
+app.config = config;
+app.datasource = datasource(app);
 
 /**
  * Get port from environment and store in Express.
