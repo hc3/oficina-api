@@ -3,7 +3,7 @@ export default {
   username: 'root',
   password: 'root',
     params: {
-      dialect: 'mysql',
+      dialect: 'mariadb',
     define: {
       underscored: true
     },
